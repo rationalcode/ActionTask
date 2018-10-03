@@ -17,21 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
         final ImageView imageView = findViewById(R.id.imageView);
 
-        new Handler().postDelayed(new Runnable() {
 
-            // Using handler with postDelayed called runnable run method
 
-            @Override
-            public void run() {
-                Intent i = new Intent(MainActivity.this, FirstScreen.class);
-                startActivity(i);
 
-                Animation rotateAnimation = new RotateAnimation(0,180);
-                imageView.startAnimation(rotateAnimation);
 
-                // close this activity
-                finish();
-            }
-        }, 5*1000); // wait for 5 seconds
     }
 }
